@@ -23,7 +23,7 @@ library(ggplot2)
 
 # setwd("/Users/brennandonnell/grad_school/Data 902/pk/")
 # df = fread("/Users/brennandonnell/grad_school/Data 902/pk/2019-02-08_apexlegends_rtweets.csv")
-df = fread("2019-02-08_apexlegends_rtweets.csv")
+df = fread("Files/2019-02-08_apexlegends_rtweets.csv")
 # files = list.files(pattern="*apexlegends_rtweets.csv")
 # l.df <- lapply(list.files(pattern="*apexlegends_rtweets.csv"), function(x) fread(x, stringsAsFactors = FALSE)) 
 # this is how you read them all in. now select from a menu. 

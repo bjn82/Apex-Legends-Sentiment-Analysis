@@ -1,5 +1,6 @@
 ui <- navbarPage(title = 'Apex Legends', 
-                 tabPanel(title = 'Readme'), 
+                 tabPanel(title = 'Readme', 
+                          includeMarkdown("README.md")), 
                  # tabPanel(title = 'Exploration', 
                  #          sidebarLayout(
                  #            sidebarPanel(
@@ -56,13 +57,13 @@ ui <- navbarPage(title = 'Apex Legends',
                  tabPanel(title = 'Sentiment Analysis', 
                           h2('Sentiment Analysis'),
                           navlistPanel(
-                            tabPanel(title = 'Afinn'),
+                            # tabPanel(title = 'Afinn'),
                             tabPanel(title = 'Bing', 
                                      splitLayout(
                                        tableOutput(outputId = 'bing_tbl'), 
                                        plotOutput(outputId = 'bing_hist')
                                      )),
-                            tabPanel(title = 'Loughran'),
+                            # tabPanel(title = 'Loughran'),
                             tabPanel(title = 'NRC', 
                                      splitLayout(
                                        tableOutput(outputId = 'nrc_table'),
