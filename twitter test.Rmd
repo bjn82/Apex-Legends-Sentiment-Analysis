@@ -1,0 +1,53 @@
+---
+title: "twitter_test"
+author: "Brennan Donnell"
+date: "1/23/2019"
+output: html_document
+---
+
+# twitter attempt
+
+The goals for the project: 
+
+1. Twitter feed (minimum 2000 tweets)/other data sources
+2. Term frequency word clouds
+    * Unigram
+    * Bigram
+    * Trigram
+3. TF-IDF word cloud
+4. Sentiment analysis (any one lexicon)
+5. Comparison/contrast word clouds based on sentiment
+6. Emotional analysis (any one lexicon)
+7. ShinyApp
+
+
+```{r libraries, echo=FALSE, warning=FALSE, message=FALSE}
+library(lubridate)
+library(rtweet)
+```
+
+```{r rtweet}
+create_token(
+
+)
+```
+
+```{r rtweet_test}
+rt <- search_tweets(q = '@PlayApex', n = 4000, include_rts = FALSE, lang = 'en' )
+
+write_as_csv(x = rt, file_name = paste0(today(),'_apexlegends_rtweets.csv'), prepend_ids = TRUE)
+
+```
+
+```{r plots}
+ts_plot(rt, by = "3 hours")
+```
+
+
+
+```{r animesearch}
+domestic <- search_tweets(q = "#DomesticNaKanojo", n = 3000, include_rts = FALSE, lang = 'en')
+domestic2 <- search_tweets(q = "#DomesticGirlfriend", n = 3000, include_rts = FALSE, lang = 'en')
+shield <- search_tweets(q = "@ShieldHeroEN", n = 3000, include_rts = FALSE, lang = 'en')
+mob <- search_tweets(q = "@MobPsychoOne", n = 3000, include_rts = FALSE, lang = 'en')
+```
